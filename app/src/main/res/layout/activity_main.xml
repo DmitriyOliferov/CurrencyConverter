@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_main"
+    tools:context=".screens.currencies.CurrencyListActivity"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/textViewInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/faq"
+        style="@style/standard_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextSumInRub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_the_sum_in_rub"
+        android:inputType="number"
+        style="@style/standard_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInfo" />
+
+    <Button
+        android:id="@+id/buttonEquals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/equals_char"
+        style="@style/standard_text"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSumInRub"
+        android:onClick="onClickEquals"/>
+
+    <TextView
+        android:id="@+id/textViewResultSumInCurrency"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/default_rub"
+        style="@style/standard_text"
+
+        android:paddingStart="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewNameResultSum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEquals" />
+
+    <TextView
+        android:id="@+id/textViewNameResultSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name_currency_default"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        style="@style/standard_text"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewResultSumInCurrency"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewResultSumInCurrency"
+        app:layout_constraintTop_toTopOf="@+id/textViewResultSumInCurrency" />
+
+    <Button
+        android:id="@+id/buttonUpdateJson"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="onClickUpdateJSON"
+        android:text="@string/currencies_update"
+        style="@style/standard_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResultSumInCurrency" />
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time_default"
+        style="@style/standard_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonUpdateJson" />
+
+    <include
+        layout="@layout/currency_json"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDate" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

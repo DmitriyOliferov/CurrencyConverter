@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CurrencyConverter</string>
+    <string name="currency_name_label">Валюта:</string>
+    <string name="currency_previous_label">Предыдущий курс:</string>
+    <string name="currency_value_label">Текущий курс:</string>
+    <string name="currency_abbreviation_label">Аббревиатура:</string>
+    <string name="enter_the_sum_in_rub">Введите сумму в рублях</string>
+    <string name="name_currency_default">RUB</string>
+    <string name="time_default">YYYY-MM-DD HH:MM:SS+03:00</string>
+    <string name="error_click_equals">Укажите сумму и валюту</string>
+    <string name="error_download_json">Не удалось загрузить данные</string>
+    <string name="faq">Введите необходимую сумму в рублях, нажмите на интересующую вас валюту, затем на кнопку равно.</string>
+    <string name="equals_char">=</string>
+    <string name="default_rub">0.0</string>
+    <string name="currencies_update">Обновить курсы валют</string>
+</resources>
